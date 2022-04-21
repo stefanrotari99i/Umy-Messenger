@@ -11,7 +11,7 @@ $thirty-font-color: #5b5965;
 
 
 body {
-    font-family: 'Archivo', sans-serif;
+    font-family: 'HelveticaNeue';
     font-size: 16px;
     font-weight: 400;
     color: #fff;
@@ -42,6 +42,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: $thirty-bg;
+    border-radius: 30px;
 }
 
 /* Handle on hover */
@@ -435,7 +436,7 @@ body {
         border-radius: 20px;
 
         &:hover {
-            background: $main-gradient;
+            background: #1e1e25;
             padding: 15px;
 
         }
@@ -445,6 +446,10 @@ body {
         background: $main-gradient;
         border-radius: 20px;
         padding: 15px;
+
+        &:hover {
+            background: $main-gradient;
+        }
     }
 
     &__item--unread {
@@ -537,6 +542,10 @@ body {
 
 .chat-sidebar {
     background: $second-bg;
+
+    &--close {
+        display: none;
+    }
 }
 
 .chat-main {
@@ -764,5 +773,61 @@ body {
         color: #fff;
         padding-left: 20px;
         border-left: 2px solid #34343e;
+    }
+}
+
+// Sidebar Chat
+.chat-sidebar {
+    padding: 40px 30px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &__header-img {
+        width: 90px;
+        height: 90px;
+        color: $main-color;
+        position: relative;
+        z-index: 2;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 105px;
+            height: 105px;
+            background: $thirty-bg;
+            border-radius: 50%;
+            box-shadow: inset 0px -7px 6px rgba($main-color, .1);
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+
+        img {
+            width: inherit;
+            border-radius: 50%;
+            height: inherit;
+            object-fit: cover;
+        }
+    }
+
+    &__header-name {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    &__header-username {
+        font-size: 14px;
+        color: $thirty-font-color;
+        font-weight: 600;
+        margin-top: 5px;
     }
 }

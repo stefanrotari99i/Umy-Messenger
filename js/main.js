@@ -4,5 +4,6 @@ $(document).ready(function(){
 
     sidebarbtn.on('click', function(){
         chat.toggleClass('chat--close');
+        $('#chat-sidebar-menu').toggleClass('chat-sidebar--close');
     })
 });

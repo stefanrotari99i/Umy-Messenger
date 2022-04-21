@@ -1,5 +1,5 @@
 body {
-  font-family: "Archivo", sans-serif;
+  font-family: "HelveticaNeue";
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -31,6 +31,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #292b33;
+  border-radius: 30px;
 }
 
 /* Handle on hover */
@@ -500,8 +501,7 @@ body {
   border-radius: 20px;
 }
 .chats__item:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#262730), to(#1f2026));
-  background: linear-gradient(#262730, #1f2026);
+  background: #1e1e25;
   padding: 15px;
 }
 .chats__item--active {
@@ -509,6 +509,10 @@ body {
   background: linear-gradient(#262730, #1f2026);
   border-radius: 20px;
   padding: 15px;
+}
+.chats__item--active:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#262730), to(#1f2026));
+  background: linear-gradient(#262730, #1f2026);
 }
 .chats__item--unread .messages-date {
   display: none;
@@ -607,6 +611,9 @@ body {
 .chat-sidebar {
   background: -webkit-gradient(linear, left top, left bottom, from(#181a1e), to(#17181c));
   background: linear-gradient(#181a1e, #17181c);
+}
+.chat-sidebar--close {
+  display: none;
 }
 
 .chat-main__avatar {
@@ -879,4 +886,60 @@ body {
   color: #fff;
   padding-left: 20px;
   border-left: 2px solid #34343e;
+}
+
+.chat-sidebar {
+  padding: 40px 30px;
+}
+.chat-sidebar__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.chat-sidebar__header-img {
+  width: 90px;
+  height: 90px;
+  color: #2295ff;
+  position: relative;
+  z-index: 2;
+}
+.chat-sidebar__header-img::before {
+  content: "";
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  background: #292b33;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0px -7px 6px rgba(34, 149, 255, 0.1);
+          box-shadow: inset 0px -7px 6px rgba(34, 149, 255, 0.1);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.chat-sidebar__header-img img {
+  width: inherit;
+  border-radius: 50%;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.chat-sidebar__header-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.chat-sidebar__header-username {
+  font-size: 14px;
+  color: #5b5965;
+  font-weight: 600;
+  margin-top: 5px;
 }

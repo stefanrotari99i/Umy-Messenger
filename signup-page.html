@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umy - Registration</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="authorization">
+            <div class="authorization__header">
+                <span class="authorization__header-title">Signup</span>
+            </div>
+            <form action="POST" class="authorization__form">
+                <input type="email" name="email" id="signup-mail" placeholder="mail@example.com" class="input-text authorization__input-text">
+                <input type="text" name="username" id="signup-username" placeholder="Username" class="input-text authorization__input-text">
+                <input type="password" name="pwd" id="signup-pwd-first" placeholder="*************" class="input-text authorization__input-text">
+                <input type="password" name="pwd-repeat" id="signup-pwd-repeat" placeholder="*************" class="input-text authorization__input-text">
+                <div class="authorization__container">
+                    <div class="authorization__remember-wrapp">
+                        <input type="checkbox" name="terms-check" id="signup-term-chek" class="input-text authorization__input-checkbox">
+                        <p class="authorization__text-alternative">I have read and agree to the Terms and Conditions.</p>
+                    </div>
+                </div>
+                <input id="register-btn" type="submit" class="authorization__btn btn btn-primary" value="Register">
+
+            </form>
+            <p class="authorization__content">Already have a account ? <a href="login-page.html" class="authorization__link-secondary">Log In</a></p>
+        </div>
+    </div>
+</body>
+</html>

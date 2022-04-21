@@ -1,0 +1,149 @@
+$main-bg: #1e1d2a;
+$second-bg: #252735;
+$thirty-bg: #1e1d2a;
+
+$main-color: #3079f4;
+
+$main-font-color: #fff;
+$second-font-color: #666677;
+
+
+body {
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background: $main-bg;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Containers
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+// Authorization
+
+.authorization {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $second-bg;
+    padding: 30px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__header-title {
+        font-size: 22px;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1.6;
+    }
+
+    &__header-subtitle {
+        font-size: 15px;
+        color: $second-font-color;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 25vw;
+    }
+
+    &__input-text {
+        border-radius: 3px;
+        background: $main-bg;
+        color: $main-font-color;
+        font-weight: 600;
+
+        &::placeholder {
+            font-size: 14px;
+            color: $second-font-color;
+            font-weight: 500;
+        }
+
+        &:focus {
+            outline: 2px solid $second-font-color;
+        }
+    }
+
+    &__btn {
+        color: #fff;
+        padding: 14px 16px;
+        background: linear-gradient(#3079f4, #3f82f6);
+        margin-top: 10px;
+    }
+
+    &__remember-wrapp {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__link {
+        font-size: 14px;
+        color: $second-font-color;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    &__content {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+
+    &__link-secondary {
+        color: #3f82f6;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    &__text-alternative {
+        font-size: 14px;
+        color: rgba(#fff, .6);
+    }
+}
+
+// Input 
+
+.input-text {
+    border: none;
+    padding: 14px 16px;
+}
+
+// Buttons
+
+.btn {
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+    border-radius: 9px;
+}
